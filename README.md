@@ -11,7 +11,7 @@ React + Vite 기반 프로젝트
 - GSAP 및 Quill을 활용한 동적 애니메이션 및 텍스트 편집**
 
 주요 기술 스택  
-- Frontend:** React, Vite, TailwindCSS, GSAP, Quill  
+- Frontend:** React, Vite, zustand, TailwindCSS, GSAP, Quill  
 - Backend:** Firebase (Firestore, Authentication) 
 
 ## 설치 및 실행  
