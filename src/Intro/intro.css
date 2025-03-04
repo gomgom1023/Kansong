@@ -1,0 +1,52 @@
+.intro-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 9999;
+  }
+  
+.intro_logo{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  max-width: 120px;
+  width: 100%;
+}
+
+.intro_logo img{
+  width: 100%;
+  filter:invert(1);
+  margin: 0 auto;
+}
+
+  .intro-title{
+    font-size: 4.5em;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    font-family: 'Jomolhari';
+    font-weight:200;
+  }
+  
+
+  @media(max-width:1000px){
+    .intro_logo{
+      width: 100px;
+    }
+  }
+
+  
+  @media(max-width:680px){
+    .intro_logo{
+      width: 80px;
+    }
+  }

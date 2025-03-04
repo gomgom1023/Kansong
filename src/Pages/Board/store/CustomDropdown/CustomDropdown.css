@@ -1,0 +1,85 @@
+/* 드롭다운 스타일 */
+  .custom-dropdown {
+    position: relative;
+    width: 120px;
+    font-size: 14px;
+  }
+  
+  /* 드롭다운이 열려있거나 값이 변경되었을 때 */
+  .custom-dropdown.open .dropdown-header {
+    background: #fff;
+    border-color: #111;
+  }
+  
+  /* 선택된 값 스타일 */
+  .dropdown-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: white;
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.3s ease-in-out, border 0.3s ease-in-out;
+  }
+  
+  /* 화살표 아이콘 */
+  .arrow {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .arrow.open {
+    transform: rotate(180deg);
+  }
+
+  .custom-dropdown.open .arrow{
+    opacity: 1;
+  }
+
+  .custom-dropdown.open .arrow i{
+    color:#111 !important;
+  }
+  
+  /* 옵션 리스트 스타일 */
+  .dropdown-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: opacity 0.3s ease-in-out, transform 0.2s ease-in-out;
+    opacity: 0;
+    transform: translateY(-5px);
+    pointer-events: none;
+  }
+  
+  /* 🔥 드롭다운이 열려있거나 값이 변경되었을 때 옵션 리스트 표시 */
+  .custom-dropdown.open .dropdown-list {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+  
+  /* 옵션 항목 */
+  .dropdown-item {
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+  }
+  
+  .dropdown-item:hover {
+    background: #f0f0f0;
+  }
+  
+  .dropdown-item.selected {
+    font-weight: bold;
+    background: #e6e6e6;
+  }
+  

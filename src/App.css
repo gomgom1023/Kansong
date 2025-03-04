@@ -1,0 +1,103 @@
+/* 기본 설정 */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  font-family: "Pretendard", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: -0.025em;
+  scroll-behavior: auto;
+  background-color: #ffffff;
+}
+
+.menu_location{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0 0.2em;
+  margin: 10px auto 0;
+  font-weight: 300;
+  color:#ffffff;
+}
+
+.menu_location li span img{
+  max-width: 20px;
+  width: 100%;
+  filter: invert(1);
+}
+
+.slide-up-container{
+  position: relative;
+  overflow: hidden;
+  height: auto;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: scale(1.5);
+  filter:blur(10px);
+  letter-spacing: 0.3em;
+  animation: fadeInAndFocus 1.25s ease forwards;
+}
+
+@keyframes fadeInAndFocus {
+  from {
+    opacity: 0;
+    transform: scale(1.5);
+    letter-spacing: 0.2em;
+    filter: blur(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+    letter-spacing: 0;
+    filter: blur(0);
+  }
+}
+
+/* Slide-up 애니메이션 */
+.slide-up {
+  transform: translateY(100%);
+  animation: slideUp 1.2s ease forwards;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.sub_wrap{
+  max-width: 80vw;
+  width: 100%;
+  margin: 100px auto;
+}
+
+@media(max-width:1000px) {
+  .sub_visual_wrap{
+    margin: 80px auto 0;
+  }
+}
+
+@media(max-width:980px) {
+  .sub_wrap{
+    max-width: 90vw;
+    margin: 80px auto;
+  }
+}
+
+@media(max-width:580px) {
+  .sub_visual_wrap{
+    margin: 60px auto 0;
+  }
+
+  .sub_wrap{
+    max-width: 90vw;
+    margin: 60px auto;
+  }
+}

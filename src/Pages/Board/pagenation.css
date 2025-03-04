@@ -1,0 +1,33 @@
+.pagination{
+    display: flex;
+    justify-content: center;
+    gap:0 3em;
+    margin: 40px auto 60px;
+}
+
+.pagination button{
+    padding: 6px;
+}
+
+.pagination button,
+.pagination button i{
+    color:#ccc;
+    transition:all 0.3s;
+    font-weight: 300;
+}
+
+.pagination button:hover,
+.pagination button:hover i{
+    color:#111;
+    font-weight: 600;
+}
+
+.pagination button.active{
+    color:#111;
+    font-weight: 600;
+}
+
+.pagination button:last-child,
+.pagination button:first-child{
+    letter-spacing: -0.5em;
+}

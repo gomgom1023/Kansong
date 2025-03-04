@@ -1,0 +1,374 @@
+.header_text h3{
+    font-size:4vw;
+    font-weight: 100;
+}
+
+.header_text h3 strong{
+    font-weight: 700;
+    color:#111;
+}
+
+.header_text h3 br{
+    display: none;
+}
+
+.header_text p{
+    font-size:1.5em;
+}
+
+.scroll-container {
+    overflow: hidden;
+    display: flex;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+    margin: 1em auto 6em;
+    background-color: #111;
+}
+
+.scroll-content {
+    display: flex;
+    flex-wrap: nowrap;
+    width: max-content;
+    animation: scrollLoop 30s linear infinite;
+    padding: 0.75em 0;
+}
+
+.scroll-content p {
+    display: flex;
+    align-items: center;
+    margin:0 50px 0 0;
+    padding:0 50px 0 0;
+    display: inline-block;
+    color:#fff;
+    border-right: 1px solid #666;
+    line-height: 1em;
+    font-weight: 200;
+}
+
+.scroll-content p i{
+    margin-right: 0.35em;
+}
+
+@keyframes scrollLoop {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.collection_01_box_wrap{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 6em;
+}
+
+.box_list{
+    width: 100%;
+}
+
+.box_list_03,
+.box_list_04{
+    flex:1;
+}
+
+.box_list h4{
+    margin: 0 auto 2em;
+    font-size: 1.85em;
+    font-weight: 700;
+    border-bottom: 1px solid #111;
+    padding: 0 0.5em 0.5em;
+}
+
+.collection_list{
+    display: flex;
+    gap:0 2em;
+}
+
+.collection_list .list{
+    flex:1;
+    text-align: center;
+    opacity: 0.3;
+    filter:grayscale(1);
+    transition: all 0.2s;
+}
+
+.collection_list .list.active{
+    opacity: 1;
+    filter:grayscale(0);
+}
+
+.collection_list li img{
+    max-width: 70px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.collection_list li .list_text{
+    display: block;
+    font-size:1.15em;
+}
+
+.collection_list li .list_text strong{
+    margin: 1em auto 0.35em;
+    display: block;
+    font-weight: 900;
+    font-size: 0.9em;
+}
+
+.arrow {
+    display: flex;
+    align-items: center;
+    font-size: 1.25em;
+    font-weight: 300;
+    opacity: 0.3;
+    filter: contrast(0);
+    transition: all 0.3s;
+  }
+  
+.arrow-active {
+    filter: contrast(1);
+    opacity: 1;
+}
+
+.call_list li{
+    display: flex;
+    justify-content: space-between;
+}
+
+.call_list li + li{
+    margin: 1em auto 3em;
+}
+
+.call_list li p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:0 0.25em;
+    font-size: 1.15em;
+}
+
+.call_list li strong{
+    font-size:1.5em;
+}
+
+.bold_list{
+    display: flex;
+}
+
+.bold_list li{
+    flex:1;
+    text-align: center;
+}
+
+.bold_list li + li{
+    border-left: 1px solid #eee;
+}
+
+.bold_list li > span{
+    font-size:1em;
+    font-weight: 400;
+    color:#999;
+}
+
+.bold_list li > span,
+.bold_list li p strong{
+    display: block;
+}
+
+.bold_list li p strong{
+    font-size: 2.5em;
+    font-weight: 900;
+}
+
+.bold_list li p strong span{
+    font-weight: 400;
+    font-size: 0.65em;
+}
+
+.collection_01_wrap table{
+    width: 100%;
+    margin: 3em auto 0;
+    border-bottom: 1px solid #eee;
+    font-size: 0.95em;
+    font-weight: 400;
+}
+
+.collection_01_wrap table thead tr th{
+    padding: 1em 1em;
+    text-align: center;
+    background-color: #111;
+    color:#fff;
+    font-size: 0.95em;
+    font-weight: 400;
+}
+
+.collection_01_wrap table thead tr th + th{
+    border-left: 1px solid #eee;
+}
+
+.collection_01_wrap table tbody tr td{
+    padding: 1em;
+    text-align: center;
+    border-left: 1px solid #eee;
+}
+
+.collection_01_wrap table tbody tr td:first-child{
+    border:0;
+}
+
+.collection_btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:0 0.5em;
+    padding: 1em 2em;
+    background-color: #eee;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.collection_btn:hover{
+    background-color: #111;
+    color:#fff;
+}
+
+@media(max-width:1200px){
+    .header_text p{
+        font-size: 1.15em;
+    }
+}
+
+@media(max-width:980px){
+    .scroll-container{
+        margin: 1em auto 4em;
+    }
+
+    .collection_01_box_wrap{
+        gap:4em;
+    }
+
+    .box_list_03, .box_list_04{
+        flex:none;
+        width: 100%;
+    }
+
+    .box_list h4{
+        margin: 0 auto 1em;
+        font-size: 1.5em;
+    }
+
+    .collection_list li .list_text{
+        font-size: 0.95em;
+    }
+
+    .call_list li p{
+        font-size: 1em;
+    }
+
+    .call_list li strong{
+        font-size: 1.25em;
+    }
+}
+
+@media(max-width:780px){
+    .collection_list{
+        gap:0 1em;
+    }
+
+    .collection_list li img{
+        max-width: 60px;
+    }
+
+    .collection_list li .list_text{
+        font-size: 12px;
+    }
+
+    .arrow{
+        font-size: 1em;
+    }
+}
+
+@media(max-width:680px){
+    .header_text p{
+        font-size: 14px;
+    }
+}
+
+@media(max-width:580px){
+    .collection_01_box_wrap{
+        gap:2em 0;
+    }
+
+    .header_text h3{
+        font-size: 2.25em;
+        line-height: 1.25em;
+    }
+
+    .header_text h3 br{
+        display: block;
+    }
+
+    .collection_list{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap:1.5em 2%;
+    }
+
+    .collection_list li{
+        flex:unset;
+    }
+
+    .call_list li + li{
+        margin: 0.5em auto 2em;
+    }
+
+    .collection_list li img{
+        max-width: 40px;
+    }
+
+    .collection_list .list{
+        flex:unset;
+        width: 28%;
+    }
+}
+
+@media(max-width:480px){
+    .collection_list .list{
+        width: 26%;
+    }
+    
+    .call_list li p{
+        font-size: 0.95em;
+    }
+
+    .call_list li strong{
+        font-size: 1.1em;
+    }
+    
+    .collection_btn i,
+    .collection_btn span{
+        font-size: 0.9em;
+    }
+
+    .bold_list li > span{
+        font-size: 0.9em;
+    }
+
+    .bold_list li p strong{
+        font-size: 1.75em;
+    }
+
+    .bold_list li p strong span{
+        font-size: 0.5em;
+    }
+
+    .collection_01_wrap table thead tr th,
+    .collection_01_wrap table tbody tr td{
+        font-size: 12px;
+    }
+}

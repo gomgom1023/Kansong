@@ -1,0 +1,183 @@
+.about05{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2em;
+}
+
+.mi_con{
+    width: 48%;
+    padding: 4em 5em;
+    border:1px solid #111111;
+    transition: 0.2s;
+}
+
+
+.mi_con:last-child{
+    width: 100%;
+}
+
+.mi_con:hover{
+    background-color: #111;
+}
+
+.mi_con:hover > *{
+    color:#ffffff;
+}
+
+.mi_info{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap:4em 0;
+}
+
+.mi_info > div{
+    width: 100%;
+}
+
+.mi_info .info_text h3{
+    font-size:2.3em;
+    font-weight: 600;
+}
+
+.mi_info .info_text p{
+    margin: 10px 0 0;
+    font-size:1.1em;
+    line-height: 1.8em;
+    font-weight: 400;
+}
+
+.mi_info .info_img > ul > li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0 3em;
+}
+
+.mi_info .info_img ul.btn_list{
+    display: flex;
+    gap: 0 1em;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.mi_info .info_img ul.btn_list li + li{
+    margin: 0;
+}
+
+.mi_info .info_img ul li + li{
+    margin-top: 3em;
+}
+
+.mi_info .info_img ul li img{
+    width: 40%;
+}
+
+.mi_info .info_img ul li p{
+    flex:1;
+}
+
+.mi_con_01 .img{
+    border: 1px solid rgb(70,69,71)
+}
+
+.mi_con_01 .img img{
+    margin: 0 auto;
+}
+
+.btn_list{
+    display: flex;
+    gap:0 1em;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.btn_list li{
+    flex:1;
+}
+
+.btn_list li a{
+    display: block;
+    width: 100%;
+    margin: 40px auto 0;
+    padding: 16px 2%;
+    text-align: center;
+    background-color: rgb(220,216,201);
+    border-radius: 3px;
+    transition: all 0.3s;
+    font-size:12px;
+    color:#111111 !important;
+}
+
+.btn_list li a:hover{
+    background-color: rgb(111 110 108);
+    color:#ffffff !important;
+}
+
+
+.btn_list li a i{
+    margin: 0 8px 0 0;
+}
+
+.color_list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2em;
+}
+
+.color_list > li{
+    width: 47%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap:0 3em
+}
+
+.color_list li span{
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+}
+
+.color_list li:nth-child(1) span{
+    background-color: rgb(13,42,32);
+}
+.color_list li:nth-child(2) span{
+    background-color: rgb(220,216,201);
+}
+.color_list li:nth-child(3) span{
+    background-color: rgb(196,20,37);
+}
+.color_list li:nth-child(4) span{
+    background-color: rgb(70,69,71);
+}
+.color_list li:nth-child(5) span{
+    background-color: rgb(248,244,238);
+}
+.color_list li:nth-child(6) span{
+    background-color: rgb(245,210,70);
+}
+
+.color_list li ul{
+    width: 76%;
+}
+
+.color_list li ul li p{
+    font-size:15px;
+}
+
+.color_list li ul li p + p{
+    margin: 10px auto 0;
+}
+
+.color_list li ul li p:first-child{
+    font-weight: 700;
+}

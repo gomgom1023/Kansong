@@ -1,0 +1,17 @@
+[
+  {
+    "origin": ["http://localhost:5173", "https://kansung-8e750.web.app"],
+    "method": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    "maxAgeSeconds": 3600,
+    "responseHeader": [
+      "Content-Type",
+      "Authorization",
+      "X-Goog-Algorithm",
+      "X-Goog-Credential",
+      "X-Goog-Date",
+      "X-Goog-SignedHeaders",
+      "X-Goog-Expires",
+      "X-Goog-Signature"
+    ]
+  }
+]

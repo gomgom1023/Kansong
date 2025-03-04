@@ -1,0 +1,64 @@
+.sub_visual{
+    position: relative;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-position: 50% 30%;
+    background-repeat: no-repeat;
+    background-size:cover;
+    z-index: 0;
+}
+  
+.sub_visual::after{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content:'';
+    background: rgba(0,0,0,0.65);
+    z-index: -1;
+}
+
+.sub_visual h2{
+    text-align: center;
+    font-size: 3em;
+    font-family:'Eulyoo1945', 'sans-serif';
+    color: #fff;
+}
+
+.sub_visual h2.sub_title_eng{
+    font-family: "Jomolhari", "sans-serif";
+}
+
+@media(max-width:980px) {
+    .sub_visual{
+        height: 500px;
+    }
+
+    .sub_visual h2{
+        font-size: 2.5em;
+    }
+
+    .menu_location{
+        margin: 0 auto;
+    }
+
+    .menu_location li span,
+    .menu_location li a{
+        font-size:12px;
+    }
+}
+
+@media(max-width:600px){
+    .sub_visual{
+        height: 320px;
+    }
+
+    .sub_visual h2{
+        font-size: 2em;
+    }
+}

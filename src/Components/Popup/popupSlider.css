@@ -1,0 +1,234 @@
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+  
+.popup-content {
+    background: white;
+    border-radius: 3px;
+    width: 400px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+}
+  
+.popup-swiper {
+    width: 100%;
+    height: 500px;
+}
+  
+.popup-slide{
+    height: 100%;
+}
+
+.popup-slide .bg_box{
+    position: relative;
+    height: 100%;
+    background: url('/popup_img01.jpg') 50% 50% no-repeat;
+    background-size: cover;
+    z-index: 0;
+    padding: 4em 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:3em 0;
+}
+
+.popup-slide .bg_box::after{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background-color: rgba(0,0,0,0.8);
+    z-index: -1;
+}
+
+.popup-slide img {
+    width: 100%;
+    border-radius: 10px;
+}
+  
+.popup-slide h3{
+    width: 100%;
+    height: auto;
+    font-size: 2em;
+    font-weight: 200;
+    color:#ffffff;
+}
+
+.popup-slide h3 strong{
+    font-weight: 700;
+}
+
+.popup-slide p{
+    color:#fff;
+    font-size:1.15em;
+    font-weight: 100;
+}
+
+.swiper-pagination-bullets {
+    width: 90% !important;
+    left: 50% !important;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0 4px;
+    margin: 0.5em auto 1em;
+}
+
+.swiper-pagination-bullet {
+    position: relative;
+    flex: 1;
+    margin: 0 !important;
+    height: 3px;
+    background: rgba(255,255,255,0.3) !important;
+    overflow: hidden;
+    border-radius: 0;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: #fff;
+    transition: width 6s linear;
+}
+
+.swiper-pagination-bullet-active::before {
+    width: 100%;
+}
+
+.swiper-pagination-bullet:not(.swiper-pagination-bullet-active)::before {
+    transition: none;
+    width: 0%;
+}
+
+.popup-buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5em;
+    gap:0 1em;
+}
+  
+.close1days {
+    display: flex;
+    align-items: center;
+    color: #777;
+    cursor: pointer;
+    font-size:1.15em;
+}
+
+/* 체크박스 스타일 */
+.close1days {
+    display: flex;
+    align-items: center;
+    color: #777;
+    cursor: pointer;
+    position: relative;
+}
+
+.close1days input[type="checkbox"] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+}
+
+/* 커스텀 체크박스 */
+.custom-checkbox {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #999;
+    border-radius: 50px;
+    display: inline-block;
+    position: relative;
+    margin-right: 6px;
+    cursor: pointer;
+}
+
+.close1days input[type="checkbox"]:checked + .custom-checkbox {
+    background-color: #111;
+    border-color: #111;
+}
+
+.close1days input[type="checkbox"]:checked + .custom-checkbox::after {
+    content: "✔";
+    color: white;
+    line-height: 1em;
+    font-size: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-weight: 400;
+}
+
+.close1days input[type="checkbox"]:checked ~ span {
+    color: #111;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.close1days .label-text{
+    font-size:0.85em;
+}
+
+.close {
+    background: none;
+    border: none;
+    color: #999;
+    font-size: 0.95em;
+    cursor: pointer;
+    font-weight: 600;
+}
+  
+.close:hover{
+    color:#111;
+}
+
+@media(max-width:680px){
+    .popup-content{
+        width: 300px;
+    }
+
+    .popup-swiper {
+        height: 400px;
+    }
+
+    .popup-slide h3{
+        font-size: 1.25em;
+    }
+
+    .popup-slide p{
+        font-size: 0.95em;
+    }
+
+    .popup-buttons{
+        padding: 1.25em;
+    }
+
+    .custom-checkbox{
+        width: 16px;
+        height: 16px;
+    }
+
+    .close1days .label-text,
+    .close{
+        font-size:13px;
+    }
+}

@@ -1,0 +1,209 @@
+.restore01_text_con_title{
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.restore01_text_con_title > div{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.text-img {
+    display: inline-block;
+    width: 100%;
+    font-size: 3vw;
+    font-weight: 600;
+    color:#111;
+    text-shadow: 5px 5px 5px rgba(0,0,0,0.15);
+    display: inline-block;
+    font-weight: bold;
+}
+
+.restore01_text_con_title > div p{
+    width: 100%;
+    margin: 2em auto 5em;
+    font-size:1.25em;
+    color:#111;
+    line-height: 1.75em;
+    font-weight: 500;
+}
+
+.restore_list_wrap > ul > li{
+    padding: 2.5em 2em;
+    cursor: pointer;
+    border-bottom: 1px solid #111;
+}
+
+.restore_list_wrap > ul > li:first-child{
+    border-top:1px solid;
+}
+
+.restore_list_wrap > ul > li:hover strong{
+    color:#111;
+}
+
+.restore_list_wrap > ul li h4{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 1.5em;
+    gap:0 0.75em;
+}
+
+.restore_list_wrap ul li h4 strong{
+    font-weight: 900;
+    color:#ddd;
+    font-size:1.1em;
+    transition: all 0.3s;
+    font-family: 'Eulyoo1945';
+}
+
+.restore_list_wrap ul li h4 i{
+    margin: 0 0 0 auto;
+    font-size:1.15em;
+    transition: transform 0.3s ease-in-out;
+}
+
+.restore_list_wrap ul li.active h4 strong{
+    color:#111;
+}
+
+.restore_list_wrap ul li.active h4 i{
+    transform: rotate(45deg);
+}
+
+.restore_list_wrap ul li .restore_list_bot{
+    max-height: 0;
+    overflow: hidden;
+}
+
+.restore_list_wrap ul li.active .restore_list_bot{
+    margin: 2em auto 0;
+}
+
+.restore_list_wrap ul li .restore_list_bot.open {
+    height:fit-content;
+    max-height:max-content;
+}
+
+.restore_list_wrap ul li .restore_list_bot_01 > div{
+    background: url('/img_restore1_01.jpg') 50% 50% no-repeat;
+}
+
+.restore_list_wrap ul li .restore_list_bot_02 > div{
+    background: url('/img_restore1_02.jpg') 50% 50% no-repeat;
+}
+
+.restore_list_wrap ul li .restore_list_bot_03 > div{
+    background: url('/img_restore1_03.jpg') 50% 50% no-repeat;
+}
+
+.restore_list_wrap ul li .restore_list_bot_04 > div{
+    background: url('/img_restore1_04.jpg') 50% 50% no-repeat;
+}
+
+.restore_list_wrap ul li .restore_list_bot_05 > div{
+    background: url('/img_restore1_05.jpg') 50% 50% no-repeat;
+}
+
+.restore_list_wrap ul li .restore_list_bot > div{
+    padding: 20em 0;
+    background-attachment: fixed;
+    background-size: cover;
+} 
+
+.restore_list_wrap ul li .restore_list_bot > ul{
+    font-size:1.15em;
+}
+
+.restore_list_wrap ul li .restore_list_bot > ul li{
+    padding: 1.5em;
+}
+
+.restore_list_wrap ul li .restore_list_bot > ul li:last-child{
+    padding: 1.5em 1.5em 0;
+}
+
+.restore_list_wrap ul li .restore_list_bot > ul li strong{
+    font-size: 1.15em;
+}
+
+.restore_list_wrap ul li .restore_list_bot > ul li p{
+    margin: 1em auto 0;
+    padding: 0 1em;
+    font-weight: 400;
+    border-left: 4px solid #eee;
+}
+
+.restore_list_wrap ul li .restore_list_bot > ul li i{
+    margin-right: 4px;
+}
+
+@media(max-width:1200px){
+    .restore01_text_con_title > div p{
+        font-size: 1em;
+    }
+}
+
+@media(max-width:980px){
+    .text-img{
+        font-size: 2em;
+    }
+
+    .restore_list_wrap > ul > li{
+        padding: 2em;
+    }
+
+    .restore_list_wrap > ul li h4{
+        font-size: 1.25em;
+    }
+    .restore_list_wrap ul li .restore_list_bot > div{
+        padding: 30% 0;
+    }
+
+    .restore_list_wrap ul li .restore_list_bot > ul li{
+        padding: 1em;
+    }
+
+    .restore_list_wrap ul li .restore_list_bot > ul li strong{
+        font-size: 1em;
+    }
+
+    .restore_list_wrap ul li .restore_list_bot > ul li p{
+        font-size: 0.95em;
+    }
+}
+
+@media (max-width: 580px) {
+    .text-img {
+        font-size: 1.5em;
+    }
+
+    .restore_list_wrap > ul > li{
+        padding: 1em;
+    }
+
+    .restore_list_wrap > ul li h4{
+        font-size: 1em;
+    }
+
+    .restore01_text_con_title > div p{
+        font-size: 14px;
+    }
+
+    .restore_list_wrap ul li .restore_list_bot > ul li strong{
+        font-size: 0.85em;
+    }
+
+    .restore_list_wrap ul li .restore_list_bot > ul li p{
+        font-size: 0.8em;
+    }
+}
