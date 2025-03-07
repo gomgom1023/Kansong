@@ -5,9 +5,9 @@ const cors = require("cors");
 const app = express();
 app.use(cors());
 
-// ✅ Open Graph 처리
+// Open Graph 처리
 app.get("/og", (req, res) => {
-    console.log("🔥 Open Graph 요청 감지됨!");
+    console.log("Open Graph 요청 감지됨!");
 
     const title = "대구 간송미술관";
     const description = "1938년 보화각에서 비롯된 문화보국의 첫 걸음";
@@ -24,14 +24,14 @@ app.get("/og", (req, res) => {
         <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <!-- ✅ Open Graph 태그 -->
+            <!-- Open Graph 태그 -->
             <meta property="og:title" content="${title}">
             <meta property="og:description" content="${description}">
             <meta property="og:image" content="${image}">
             <meta property="og:url" content="${url}">
             <meta property="og:type" content="website">
 
-            <!-- ✅ Twitter Card 추가 -->
+            <!-- Twitter Card 추가 -->
             <meta name="twitter:card" content="summary_large_image">
             <meta name="twitter:title" content="${title}">
             <meta name="twitter:description" content="${description}">
@@ -39,7 +39,6 @@ app.get("/og", (req, res) => {
             <title>${title}</title>
         </head>
         <body>
-            <p>✅ Open Graph 데이터가 정상적으로 제공됩니다!</p>
         </body>
         </html>
     `);
