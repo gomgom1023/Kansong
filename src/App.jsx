@@ -86,7 +86,7 @@ function AppContent() {
               <Intro onFinish={handleIntroFinish} />
             </Suspense>
           ) : (
-            <Suspense fallback={<div>페이지 로딩 중...</div>}>
+            <Suspense fallback={<div className="loading"><i className="xi-spinner-1"></i></div>}>
               <Routes>
                 <Route path="/" element={<Layout />}>
                   <Route index element={<Welcome />} />

@@ -42,6 +42,18 @@ html, body {
   animation: fadeInAndFocus 1.25s ease forwards;
 }
 
+.loading{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading i{
+  font-size: 1.15em;
+}
+
 @keyframes fadeInAndFocus {
   from {
     opacity: 0;
