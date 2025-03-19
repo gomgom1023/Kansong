@@ -44,9 +44,14 @@ function AppContent() {
   };
 
   useEffect(() => {
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    const isSamsungBrowser = /SamsungBrowser/.test(navigator.userAgent);
+    const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+    if (isSamsungBrowser && isDarkMode) {
       document.documentElement.style.backgroundColor = "#ffffff";
-      document.documentElement.style.color = "#111111";
+      document.documentElement.style.colorScheme = "light";
+      document.body.style.backgroundColor = "#ffffff";
+      document.getElementById("root").style.backgroundColor = "#ffffff";
     }
   }, []);
 

@@ -1,5 +1,5 @@
 /* 기본 설정 */
-html, body {
+html, body, #root {
   margin: 0;
   padding: 0;
   height: auto;
@@ -9,7 +9,9 @@ html, body {
   font-style: normal;
   letter-spacing: -0.025em;
   scroll-behavior: auto;
-  background-color: #ffffff;
+  background-color: #ffffff !important;
+  color-scheme: light;
+  forced-color-adjust: none !important;
 }
 
 @media (prefers-color-scheme: dark) {

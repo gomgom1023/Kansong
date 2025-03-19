@@ -507,7 +507,7 @@ mm.add("(max-width: 780px)", () => {
       duration: 1000000,
     })
     .to(textBox, {
-      y: -180, 
+      y: -200, 
       delay: 10,
       scrub: 3,
       duration: 1000000,
@@ -524,7 +524,7 @@ mm.add("(max-width: 780px)", () => {
     },'<')
     .to(sub_TextBox, {
       opacity: 1, 
-      bottom: isSamsungBrowser ? '15%' : '15%',
+      bottom: isSamsungBrowser ? '22%' : '20%',
       scrub: 3,
       duration: 1000000,
       ease: "power2.out",
