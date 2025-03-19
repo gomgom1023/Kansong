@@ -12,6 +12,14 @@ html, body {
   background-color: #ffffff;
 }
 
+@media (prefers-color-scheme: dark) {
+  html, body {
+    background-color: #ffffff !important;
+    color: #111111 !important;
+  }
+}
+
+
 .menu_location{
   display: flex;
   flex-direction: row;

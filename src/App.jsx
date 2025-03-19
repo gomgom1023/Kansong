@@ -43,6 +43,13 @@ function AppContent() {
     setShowIntro(false);
   };
 
+  useEffect(() => {
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.documentElement.style.backgroundColor = "#ffffff";
+      document.documentElement.style.color = "#111111";
+    }
+  }, []);
+
   // Firebase Auth 유지 설정
   useEffect(() => {
     setPersistence(auth, browserLocalPersistence)

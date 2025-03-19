@@ -24,6 +24,8 @@ app.get("/og", (req, res) => {
         <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta name="color-scheme" content="light">
+            
             <!-- Open Graph 태그 -->
             <meta property="og:title" content="${title}">
             <meta property="og:description" content="${description}">

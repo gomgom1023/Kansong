@@ -194,6 +194,7 @@ const Welcome = () => {
     const textBox = section02Container?.querySelector(".text_box");
     const imgBox = section02Container?.querySelector(".section02_img");
     const sub_TextBox = section02Container?.querySelector(".section02_sub_text");
+    const isSamsungBrowser = /SamsungBrowser/.test(navigator.userAgent);
 
   if (!section02Container || !textBox) {
     console.error("Some refs are missing in Section02!");
@@ -203,9 +204,10 @@ const Welcome = () => {
   gsap.set(textBox, {
     opacity: 0,
     scale: 10, 
-    top:'50%',
+    top: "50%",
     left: "50%",
-    transform:'translate(-50%,-50%)',
+    xPercent: -50,
+    yPercent: -50,
     transformOrigin: "center center"
   });
   gsap.set(imgBox, {
@@ -219,9 +221,10 @@ const Welcome = () => {
   });
   gsap.set(sub_TextBox, {
     opacity: 0,
-    bottom:'-20%',
+    bottom: isSamsungBrowser ? '-20%' : '-17%',
     left:'50%',
-    transform:'translateX(-50%)',
+    xPercent: -50,
+    yPercent: -50,
     transformOrigin: "bottom", 
   });
 
@@ -257,9 +260,10 @@ const Welcome = () => {
   },">+=2")
   .to(imgBox, {
     opacity: 1,
-    top: '52.5%',
+    top: '55%',
     left: '50%',
-    transform: 'translate(-50%, -50%)',
+    xPercent: -50,
+    yPercent: -50,
     scrub: 3,
     duration: 1000000,
     ease: "slow(0.7, 0.7, false)"
@@ -364,7 +368,8 @@ mm.add("(max-width: 780px)", () => {
     scale: 10,
     top:'50%',
     left: "50%",
-    transform:'translate(-50%,-50%)',
+    xPercent: -50,
+    yPercent: -50,
     transformOrigin: "center center", 
   });
   gsap.set(imgBox, {
@@ -519,7 +524,7 @@ mm.add("(max-width: 780px)", () => {
     },'<')
     .to(sub_TextBox, {
       opacity: 1, 
-      y: -240,
+      bottom: isSamsungBrowser ? '15%' : '15%',
       scrub: 3,
       duration: 1000000,
       ease: "power2.out",

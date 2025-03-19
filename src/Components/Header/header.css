@@ -5,19 +5,25 @@
   width: 100%;
   height: 80px;
   z-index: 999;
-  background-color: transparent;
+  background-color: inherit !important;
 }
 
 .header_bar {
   height: 100%;
   will-change: transform;
+  background-color: rgba(255,255,255,1);
+}
+
+@supports (-webkit-touch-callout: none) {
+  .header_bar {
+    will-change: auto !important;
+  }
 }
 
 #header h1 a img{
   filter:brightness(0.5);
 }
 
-/* ✅ hidden → show 전환 시 transition 적용 */
 .header-transition-enter {
   transform: translateY(-100%);
   transition: transform 0.3s linear;
@@ -28,7 +34,6 @@
   transition: transform 0.3s linear;
 }
 
-/* ✅ show → hidden 전환 시 transition 적용 */
 .header-transition-exit {
   transform: translateY(0);
   transition: transform 0.3s linear;
@@ -40,12 +45,13 @@
 }
 
 .header_bar.show{
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
 #header .sub_class{
   border-color: rgba(255,255,255,0.1);
   transition: all 0.4s;
+  background-color: rgba(255,255,255,0);
 }
 
 #header .sub_class .header_menu > li > a{
@@ -56,8 +62,22 @@
   filter: brightness(100);
 }
 
+@supports (-webkit-touch-callout: none) {
+  #header .sub_class h1 a img {
+    filter: brightness(100);
+  }
+}
+
 #header .sub_class .hamburger-menu ul li span{
-  background-color: #ffffff;
+  background-color: #ffffff !important;
+  filter: none !important;
+}
+
+@supports (-webkit-touch-callout: none) {
+  #header .sub_class .hamburger-menu ul li span {
+    background-color: #ffffff !important;
+    filter: brightness(1) !important;
+  }
 }
 
 #header .sub_class .choice_lang{
@@ -69,7 +89,7 @@
 }
 
 #header .sub_class .choice_lang ul li button{
-  color:#111111;
+  color:#111111 !important;
 }
 
 #header .sub_class_white {
@@ -139,7 +159,7 @@
   display: block;
   width: 100%;
   height: 2px;
-  background-color: #111;
+  background-color: #111111;
   border-radius: 1px;
 }
 
@@ -440,12 +460,18 @@
     filter: brightness(0);
   }
 
+  @supports (-webkit-touch-callout: none) {
+    #header .sub_class h1 a img {
+      filter: brightness(0);
+    }
+  }
+
   #header .sub_class .hamburger-menu ul li span{
-    background-color: #111;
+    background-color: #111111 !important;
   }
 
   #header .sub_class .choice_lang{
-    color:#111;
+    color:#111111;
   }
 
   #header .sub_class .choice_lang img {
@@ -569,5 +595,12 @@
 
   .open_sub_menu > li > a {
     font-size: 14px;
+  }
+}
+
+/* 삼성 인터넷에서 다크 모드 강제 해제 */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: rgba(255,255,255,1) !important;
   }
 }
